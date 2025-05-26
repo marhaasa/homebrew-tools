@@ -39,14 +39,30 @@ class Weave < Formula
       EOS
     end
 
-    # Install npm dependencies
-    system "npm", "ci", "--production"
+   # Install all files to libexec
+    libexec.install Dir["*"]
     
-    # Install the binary
-    bin.install "weave.js" => "weave"
+    # Install and build
+    cd libexec do
+      # Install all dependencies
+      system "npm", "ci"
+      
+      # Build TypeScript to JavaScript
+      system "npm", "run", "build"
+      
+      # Remove dev dependencies to save space
+      system "npm", "prune", "--production"
+    end
     
-    # Make it executable
+    # Create wrapper script
+    (bin/"weave").write <<~EOS
+      #!/bin/bash
+      cd "#{libexec}" || exit 1
+      exec node "#{libexec}/bin/weave" "$@"
+    EOS
+
     chmod 0755, bin/"weave"
+
   end
 
   def check_python_version
