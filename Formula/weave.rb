@@ -19,7 +19,7 @@ class Weave < Formula
     (bin/"weave").write <<~EOS
       #!/bin/bash
       cd "#{libexec}" || exit 1
-      exec node "#{libexec}/bin/weave" "$@"
+      exec node "#{libexec}/dist/weave" "$@"
     EOS
 
     chmod 0755, bin/"weave"
