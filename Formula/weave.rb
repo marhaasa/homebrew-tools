@@ -5,18 +5,6 @@ class Weave < Formula
   sha256 "992dddfbab61f3919f2d5882ea6c5f5c371abc9dc11def58ea88a848826f60a2"
   license "MIT"
   version "0.1.6"
-  
-  depends_on "node"
-
-  def install
-    # Check for Python and version
-class Weave < Formula
-  desc "An interactive TUI for Microsoft Fabric CLI"
-  homepage "https://github.com/marhaasa/weave"
-  url "https://github.com/marhaasa/weave/releases/download/v0.1.6/weave-0.1.6.tar.gz"
-  sha256 "992dddfbab61f3919f2d5882ea6c5f5c371abc9dc11def58ea88a848826f60a2"
-  license "MIT"
-  version "0.1.6"
 
   depends_on "node"
 
