@@ -13,7 +13,7 @@ class Weave < Formula
 
     # Only install production deps (no build)
     cd libexec do
-      system "npm", "ci", "--omit=dev", "--ignore-scripts"
+      system "npm", "ci", "--omit=dev"
     end
 
     (bin/"weave").write <<~EOS
