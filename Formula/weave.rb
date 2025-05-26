@@ -13,13 +13,13 @@ class Weave < Formula
 
     # Only install production deps (no build)
     cd libexec do
-      system "npm", "ci", "--omit=dev"
+      system "npm", "ci", "--omit=dev", "--ignore-scripts"
     end
 
     (bin/"weave").write <<~EOS
       #!/bin/bash
       cd "#{libexec}" || exit 1
-      exec node "#{libexec}/dist/weave" "$@"
+      exec node "#{libexec}/dist/weave.js" "$@"
     EOS
 
     chmod 0755, bin/"weave"
