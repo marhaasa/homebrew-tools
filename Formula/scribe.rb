@@ -3,8 +3,8 @@ class Scribe < Formula
 
   desc "CLI for managing notes in Neovim + Obsidian"
   homepage "https://github.com/marhaasa/scribe"
-  url "https://github.com/marhaasa/scribe/releases/download/v0.1.11/scribe-0.1.11.tar.gz"
-  sha256 "74668c4276643dcbb097700cdf90d04af3661bc9daf0335f0d0cee9c9d426489"
+  url "https://github.com/marhaasa/scribe/releases/download/v0.1.12/scribe-0.1.12.tar.gz"
+  sha256 "fda8ecbf877fcf412241ca69a178e79df86dc822c318099a5a9064cd6a76888a"
   license "MIT"
 
   depends_on "python@3.12"
@@ -20,7 +20,7 @@ class Scribe < Formula
   end
 
   resource "markdown-it-py" do
-    url "https://files.pythonhosted.org/packages/e3/f6/0a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb/markdown-it-py-3.0.0.tar.gz"
+    url "https://files.pythonhosted.org/packages/38/71/3b932df36c1a044d397a1f92d1cf91ee0a503d91e470cbd670aa66b07ed0/markdown-it-py-3.0.0.tar.gz"
     sha256 "e3f60a94fa066dc52ec76661e37c851cb232d92f9886b15cb560aaada2df8feb"
   end
 
