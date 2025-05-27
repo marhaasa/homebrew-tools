@@ -3,8 +3,8 @@ class Scribe < Formula
 
   desc "CLI for managing notes in Neovim + Obsidian"
   homepage "https://github.com/marhaasa/scribe"
-  url "https://github.com/marhaasa/scribe/archive/refs/tags/v0.1.25.tar.gz"
-  sha256 "c52c0606e827dd95884f04b89fff1e4efe784fe650aabeb15f02bc76fff3dc80"
+  url "https://github.com/marhaasa/scribe/archive/refs/tags/v0.1.26.tar.gz"
+  sha256 "b83e9826b657b91fd51340d51394b7adafcd984aa3e8af5dee0ab9e53524bb95"
   license "MIT"
 
   depends_on "python@3.12"
