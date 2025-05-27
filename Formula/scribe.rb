@@ -3,19 +3,16 @@ class Scribe < Formula
 
   desc "CLI for managing notes in Neovim + Obsidian"
   homepage "https://github.com/marhaasa/scribe"
-  url "https://github.com/marhaasa/scribe/releases/download/v0.1.20/scribe-0.1.20-py3-none-any.whl"
-  sha256 "448644723ad99241b884edd6898ded2ddc9a09cf6bb27bacd6439077dd83af41"
+  url "https://github.com/marhaasa/scribe/releases/download/v0.1.21/scribe-0.1.21.tar.gz"
+  sha256 "0a97d3dbe6327b0b33e1ca1bd39454f291018d5fab6494683aa092de01bf9f90"
   license "MIT"
 
   depends_on "python@3.12"
 
-  resource "typer" do
-    url "https://files.pythonhosted.org/packages/c5/58/a79003b91ac2c6890fc5d90145c662fd5771c6b1572e4c7b8d16d8e7d2a/typer-0.12.3.tar.gz"
-    sha256 "49e73131481d804288ef62598d97a1ceef3058905aa536a1134f90891ba35482"
-  end
-
   def install
-    virtualenv_install_with_resources
+    venv = virtualenv_create(libexec, "python3.12")
+    system libexec/"bin/pip", "install", buildpath
+    bin.install_symlink libexec/"bin/scribe"
   end
 
   test do
