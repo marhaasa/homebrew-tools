@@ -1,10 +1,10 @@
 class Weave < Formula
     desc "An interactive TUI for Microsoft Fabric CLI"
     homepage "https://github.com/marhaasa/weave"
-    url "https://github.com/marhaasa/weave/releases/download/v0.1.16/weave-0.1.16.tar.gz"
-    sha256 "a3382f6d0210915ecb0ab4a2ac5ddb225d2bb745569b6711b99d2c896eeeb87b"
+    url "https://github.com/marhaasa/weave/releases/download/v0.1.17/weave-0.1.17.tar.gz"
+    sha256 "a599e8eb63df2af4087e32075bf1b1b2d9b84936bffa3cd0f9801faff2a35938"
     license "MIT"
-    version "0.1.16"
+    version "0.1.17"
 
     depends_on "node"
 
