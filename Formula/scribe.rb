@@ -1,29 +1,18 @@
 class Scribe < Formula
-include Language::Python::Virtualenv
+  include Language::Python::Virtualenv
 
-desc "CLI for managing notes in Neovim + Obsidian"
-homepage "https://github.com/marhaasa/scribe"
-url "https://github.com/marhaasa/scribe/archive/refs/tags/v0.1.5.tar.gz"
-sha256 "ab2b5743049ff2b25ad5e31353c5e006f2394e44d514f814fa53f33c7f7dad5f"
-license "MIT"
-head "https://github.com/marhaasa/scribe.git", branch: "main"
+  desc "CLI for managing notes in Neovim + Obsidian"
+  homepage "https://github.com/marhaasa/scribe"
+  url "https://files.pythonhosted.org/packages/py3/s/scribe/scribe-0.1.7-py3-none-any.whl"
+  sha256 "ad4c5db150d86892356bdda4e46c80e4e9673eee10d7c3af63561f25f68f66de"
+  license "MIT"
 
-depends_on "python@3.12"
+  depends_on "python@3.12"
 
-def install
-  # Create virtual environment
-  venv = virtualenv_create(libexec, "python3.12")
+  def install
+    virtualenv_install_with_resources
+  end
 
-  # Upgrade pip for better wheel support
-  system libexec/"bin/pip", "install", "--upgrade", "pip"
-
-  # Install the package and all dependencies using pip
-  # This uses pre-built wheels from PyPI which is much faster
-  system libexec/"bin/pip", "install", buildpath
-
-  # Link the executable
-  bin.install_symlink libexec/"bin/scribe"
-end
   test do
     # Test version command
     assert_match "scribe version #{version}", shell_output("#{bin}/scribe version")
