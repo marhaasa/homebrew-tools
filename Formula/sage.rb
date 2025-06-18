@@ -3,15 +3,15 @@ class Sage < Formula
 
   desc "Intelligent semantic tagging for markdown files using Claude"
   homepage "https://github.com/marhaasa/sage"
-  url "https://github.com/marhaasa/sage/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "6558f8b522a8640a27a949efa8384563ee3cce4f5b9e1a1c8ea1076d8f099594"
+  url "https://github.com/marhaasa/sage/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "ce49879cfab53312e190cbad43276ee09c8a417904700929fad3db3330418e00"
   license "MIT"
 
   depends_on "python@3.12"
 
   resource "aiofiles" do
-    url "https://files.pythonhosted.org/packages/source/a/aiofiles/aiofiles-24.1.0.tar.gz"
-    sha256 "22a075c9dd35a059d8e701c4dbc7a73b99c9e9b7b3962d5afed35c5b31a7b2a8"
+    url "https://files.pythonhosted.org/packages/source/a/aiofiles/aiofiles-23.2.1.tar.gz"
+    sha256 "84ec2218d8419404abcb9f0c02df3f34c6e0a68ed41072acfb1cef5cbc29051a"
   end
 
   resource "click" do
