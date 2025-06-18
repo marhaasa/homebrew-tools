@@ -3,8 +3,8 @@ class Sage < Formula
 
   desc "Intelligent semantic tagging for markdown files using Claude"
   homepage "https://github.com/marhaasa/sage"
-  url "https://github.com/marhaasa/sage/archive/refs/tags/v0.1.5.tar.gz"
-  sha256 "07148fec2b316784e6b84c2d42cdf3aec91f770f7891388aea01b7a03b747b19"
+  url "https://github.com/marhaasa/sage/archive/refs/tags/v0.1.6.tar.gz"
+  sha256 "da94fd7e4bab46a58b97a03829274fdaa9c60fd82aac59cd74218c5ceb8e32c4"
   license "MIT"
 
   depends_on "python@3.12"
