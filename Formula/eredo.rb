@@ -1,5 +1,5 @@
 class Eredo < Formula
-  desc "Docker sandbox for Claude Code: allowlisted egress, no capabilities, .git masks"
+  desc "Docker sandbox for Claude Code: allowlisted egress, no root, no privileges, .git masks"
   homepage "https://github.com/marhaasa/eredo"
   url "https://github.com/marhaasa/eredo.git",
       tag:      "v0.2.0",
