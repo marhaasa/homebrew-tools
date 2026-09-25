@@ -2,8 +2,8 @@ class Eredo < Formula
   desc "Docker sandbox for Claude Code: allowlisted egress, no root, no privileges, .git masks"
   homepage "https://github.com/marhaasa/eredo"
   url "https://github.com/marhaasa/eredo.git",
-      tag:      "v0.3.0",
-      revision: "a4060ed5f02b1248bbf7c57144019a8756d62e53"
+      tag:      "v0.3.1",
+      revision: "62b97ab4efe6250ab7986f4b3042d76ca5b80408"
   license "MIT"
   head "https://github.com/marhaasa/eredo.git", branch: "main"
 
