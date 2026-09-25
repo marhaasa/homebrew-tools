@@ -3,7 +3,7 @@ class Moat < Formula
   homepage "https://github.com/marhaasa/moat"
   url "https://github.com/marhaasa/moat.git",
       tag:      "v0.1.0",
-      revision: "6946fc181c46a3252ea512ebf9cc03d39317691b"
+      revision: "aca55beccb4a4c46e5fec23c0702082a6fc819f1"
   license "MIT"
   head "https://github.com/marhaasa/moat.git", branch: "main"
 
